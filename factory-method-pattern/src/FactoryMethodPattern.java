@@ -1,7 +1,4 @@
-import impls.IndianPizzaStore;
-import impls.Pizza;
-import impls.PizzaStore;
-import impls.UsaPizzaStore;
+import impls.*;
 
 /**
  * @author autonu.kro
@@ -16,5 +13,8 @@ public class FactoryMethodPattern{
                 Pizza usaPizza = usaPizzaStore.order("nyc");
                 System.out.println(indianPizza.getType());
                 System.out.println(usaPizza.getType());
+
+                SmartControllerFactory<Double> factory = new RPSSmartControllerFactory();
+                factory.doExecute(100.0, "365");
         }
 }
